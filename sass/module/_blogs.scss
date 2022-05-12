@@ -1,0 +1,155 @@
+@use "../setting/index" as *;
+@use "../variable/index" as *;
+
+.blogs {
+    padding: 5rem 0 20rem;
+
+    .inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 3rem;
+
+        @include mq('md') {
+            display: block;
+        }
+    }
+}
+
+.blogs-wrap {
+
+    &:nth-child(2) {
+
+        @include mq('md') {
+            margin-top: 6rem;
+        }
+    }
+
+    .sec-ttl.is-center {
+        text-align: center;
+    }
+}
+
+.blogs-swiper {
+    width: 57rem;
+
+    @include mq('md') {
+        width: 100%;
+    }
+
+    $swiperBtnPos: 1.2rem;
+    $swiperBtnPos_sp: 0;
+    $swiperBtnPos_top: 23rem;
+    $swiperBtnPos_top_sp: 18rem;
+
+    .swiper-button-prev, .swiper-rtl .swiper-button-next {
+        left: $swiperBtnPos;
+        right: auto;
+
+        @include mq('md') {
+            left: $swiperBtnPos_sp;
+        }
+    }
+
+    .swiper-button-next, .swiper-rtl .swiper-button-prev {
+        right: $swiperBtnPos;
+        left: auto;
+
+        @include mq('md') {
+            right: $swiperBtnPos_sp;
+        }
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        top: $swiperBtnPos_top;
+        width: 4.8rem;
+        height: 4.8rem;
+        border-radius: 100vh;
+        background: $main-color;
+        color: #fff;
+
+        @include mq('md') {
+            top: $swiperBtnPos_top_sp;
+            width: 3.6rem;
+            height: 3.6rem;
+        }
+    }
+
+    .swiper-button-next:after, .swiper-button-prev:after {
+        font-size: 2rem;
+
+        @include mq('md') {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.blogs-slide {
+    width: 51rem;
+    margin-top: 6.1rem;
+    padding: 0 3rem;
+
+    @include mq('md') {
+        width: 100%;
+        padding: 0 1.5rem;
+    }
+
+    &__ttl {
+        font-size: 2.1rem;
+        font-family: $main-font-bold;
+        margin-top: 3rem;
+        color: $main-color;
+
+        @include mq('md') {
+            font-size: 1.6rem;
+            line-height: 1.2;
+        }
+    }
+
+    &__desc {
+        font-size: 1.6rem;
+        line-height: 2;
+        font-family: $sub-font;
+        margin-top: 2rem;
+
+        @include mq('md') {
+            font-size: 1.4rem;
+        }
+    }
+
+    .more-btn {
+        width: 36rem;
+
+        @include mq('md') {
+            width: 29rem;
+        }
+    }
+}
+
+.blogs-slide-img {
+    width: 100%;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 34rem;
+        object-fit: cover;
+
+        @include mq('md') {
+            height: 24rem;
+        }
+    
+    }
+
+    p {
+        background: #fff;
+        color: $main-color;
+        font-size: 1.4rem;
+        letter-spacing: .2em;
+        font-family: $main-font-bold;
+        border-radius: 0 20px 0 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 2rem 1.5rem 0 0;
+    }
+}

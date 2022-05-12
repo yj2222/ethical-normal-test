@@ -1,0 +1,82 @@
+@use "../setting/index" as *;
+@use "../variable/index" as *;
+
+/* Header
+=============================================================*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    padding: 2vw 3vw 3vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 12;
+    transition: .3s;
+    border: 1vw solid $main-color;
+    border-bottom: none;
+
+    &.scrolled {
+        background: #fff;
+        padding: 1vw 2vw 1vw;
+    }
+
+    @include mq('md') {
+        padding: 3rem 3rem 1rem;
+        border: 1rem solid $main-color;
+        border-bottom: none;
+
+        &.scrolled {
+            background: #fff;
+            padding: 3rem 3rem 1rem;
+        }
+    }
+}
+
+.header-logo {
+    width: 30rem;
+
+    @include mq('md') {
+        width: 25rem;
+    }
+
+    a {
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.g-nav {
+
+    @include mq('md') {
+        display: none;
+    }
+     
+    ul {
+        display: flex;
+
+        li {
+            margin-left: 1rem;
+
+            a {
+                font-size: 1.4rem;
+            }
+        }
+
+        li:not(:first-child)::before {
+            content: "/";
+            padding-right: .5rem;
+        }
+    }
+}
+
+.sp-btn {
+    width: 3rem;
+
+    img {
+        width: 100%;
+    }
+}

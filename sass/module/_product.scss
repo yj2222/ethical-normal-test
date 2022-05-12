@@ -1,0 +1,53 @@
+@use "../setting/index" as *;
+@use "../variable/index" as *;
+
+/* Product
+=============================================================*/
+.product {
+    background: url(../../img/product_bg.webp);
+    padding: 20rem 3rem;
+
+    @include mq('md') {
+        padding: 12rem 3rem 15rem;
+    }
+
+   .more-btn {
+       margin-left: 0;
+       width: 36rem;
+
+        @include mq('md') {
+            width: 29rem;
+            margin: 0 auto;
+            position: relative;
+            top: -3rem;
+        }
+   }
+}
+
+.product-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include mq('md') {
+        grid-template-columns: 1fr;
+    } 
+  
+}
+
+.product-img {
+    margin-top: 5rem;
+
+    @include mq('md') {
+        margin-top: 3rem;
+    } 
+
+    img {
+        width: 60rem;
+        height: 60rem;
+
+        @include mq('md') {
+            width: 33rem;
+            height: 22rem;
+        } 
+    }
+}

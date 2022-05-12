@@ -1,0 +1,145 @@
+@use "../setting/index" as *;
+@use "../variable/index" as *;
+
+/* About US
+=============================================================*/
+.about {
+    color: #fff;
+    padding: 5rem 3rem 22vw;
+    background: 
+    url(../img/about_bg-top.webp) calc(100% - 27%) top / 31% no-repeat,
+    url(../img/about_bg-bottom.webp) calc(100% - 20%) 95% / 68% no-repeat,
+    $main-color;
+    margin-top: -1px;
+
+
+    @include mq('md') {
+        padding: 5rem 3rem 20rem;
+        background: 
+        // url(../img/about_bg-top_sp.webp) center 22% / 55rem no-repeat,
+        url(../img/about_bg-bottom_sp.webp) calc(100% - 2rem) calc(100% - 5rem) / 28rem no-repeat,
+        $main-color;
+    }
+}
+
+.about-text {
+    margin-top: 5rem;
+
+    @include mq('md') {
+        margin-top: 5rem;
+    }
+}
+
+.about-text-top {
+    line-height: 1.5;
+    letter-spacing: .1em;
+    // padding-left: 6rem;
+
+    // @include mq('md') {
+    //     padding-left: 2rem;
+    // }
+
+    p {
+        font-family: $main-font-bold;
+    }
+
+    p:first-child {
+        font-size: 2.4rem;
+
+        @include mq('md') {
+            font-size: 1.6rem;
+        }
+    }
+
+    p:nth-child(2) {
+        font-size: 1.8rem;
+        margin-top: 3rem;
+
+        @include mq('md') {
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            line-height: 2;
+        }
+    }
+}
+
+.about-text-middle,
+.about-text-bottom {
+    font-family: $sub-font;
+    line-height: 2;
+    letter-spacing: .05em;
+    width: 48rem;
+    // padding-left: 6rem;
+
+    @include mq('md') {
+        width: auto;
+        // padding-left: 2rem;
+    }
+    
+    p {
+        margin-top: 2rem;
+        font-size: 1.6rem;
+
+        @include mq('md') {
+            font-size: 1.4rem;
+            width: 15rem;
+        }
+    }
+}
+
+.about-text-middle {
+
+    @include mq('md') {
+        padding-left: 0;
+        // padding-right: 2rem;
+    } 
+
+    p  {
+
+        @include mq('md') {
+            margin-left: auto;
+        }    
+    }
+}
+
+.about-text-bottom {
+
+    p:last-child  {
+
+        @include mq('md') {
+            width: 24rem;
+        }    
+    }
+}
+
+.about-sp-bg-item {
+    position: absolute;
+    top: 6%;
+    left: 0;
+    overflow-x: hidden;
+    width: 100%;
+    z-index: 11;
+    height: auto;
+
+    img {
+        width: 54rem;
+        transform: translateX(-7rem);
+    }
+}
+
+.about-penguin {
+    position: absolute;
+    bottom: 3rem;
+    left: calc((100vw - 1400px) / 2 + 2rem);
+    width: 17vw;
+    z-index: 10;
+
+    @media screen and (max-width: 1400px) {
+        left: 3rem;
+    }
+
+    @include mq('md') {
+        bottom: 7rem;
+        width: 8rem;
+    } 
+}

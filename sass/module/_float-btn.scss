@@ -1,0 +1,59 @@
+@use "../setting/index" as *;
+@use "../variable/index" as *;
+
+/* FloatBtn
+=============================================================*/
+
+.float-btn-line {
+    position: fixed;
+    bottom: 2rem;
+    right: 0;
+    z-index: 101;
+    width: 10rem;
+
+    @include mq('md') {
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 33rem;
+        max-width: 500px;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.float-btn-wrap {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 2.9vw;
+    top: 18vw;
+    z-index: 12;
+
+    @include mq('md') {
+        flex-direction: row;
+        right: 50%;
+        top: auto;  
+        bottom: 0;  
+        transform: translateX(50%);
+    }
+
+    a {
+        transition: .3s;
+
+        &:hover {
+            opacity: .8;
+            transform: scale(1.2);
+        }
+
+        img {
+            width: 6.4rem;
+
+            @include mq('md') {
+                width: 8.4rem;
+            }
+        }
+    }
+}

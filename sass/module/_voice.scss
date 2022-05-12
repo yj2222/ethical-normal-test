@@ -1,0 +1,125 @@
+@use "../setting/index" as *;
+@use "../variable/index" as *;
+
+.voice {
+    background: $bg-color;
+    padding: 5rem 0 20rem;
+
+    @include mq('md') {
+        padding: 3rem 0 20rem;
+    }
+
+    .inner {
+
+        @include mq('lg') {
+            padding: 0 3rem;
+        }
+    }
+
+    $swiperBtnPos: 7.2%;
+    $swiperBtnPos_sp: 0;
+
+    .swiper-button-prev, .swiper-rtl .swiper-button-next {
+        left: $swiperBtnPos;
+        right: auto;
+
+        @include mq('md') {
+            left: $swiperBtnPos_sp;
+        }
+    }
+
+    .swiper-button-next, .swiper-rtl .swiper-button-prev {
+        right: $swiperBtnPos;
+        left: auto;
+
+        @include mq('md') {
+            right: $swiperBtnPos_sp;
+        }
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        top: 50%;
+        width: 6rem;
+        height: 6rem;
+        border-radius: 100vh;
+        background: $main-color;
+        color: #fff;
+
+        @include mq('md') {
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+
+    .swiper-button-next:after, .swiper-button-prev:after {
+        font-size: 2.4rem;
+
+        @include mq('md') {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.voice-swiper {
+    margin-top: 6.1rem;
+
+    @include mq('md') {
+        width: 31rem;
+    }
+}
+
+.voice-swiper-slide {
+    padding: 3rem;
+
+    @include mq('md') {
+        padding: 2rem;
+    }
+
+    &__inner {
+        background: #fff;
+        padding: 6rem;
+
+        @include mq('md') {
+            padding: 3rem;
+        }        
+    }
+}
+
+.voice-slide-category {
+    color: $main-color;
+    font-family: $main-font-bold;
+
+    @include mq('md') {
+        font-size: 1.4rem;
+    }
+}
+
+.voice-slide-ttl {
+    color: $main-color;
+    font-family: $main-font-bold;
+    font-size: 2.1rem;
+    line-height: 1.3;
+    margin-top: 1rem;
+
+    @include mq('md') {
+        font-size: 1.6rem;
+    }
+}
+
+.voice-slide-name {
+    margin-top: 1rem;
+
+    @include mq('md') {
+        font-size: 1.4rem;
+    }
+}
+
+.voice-slide-comment {
+    font-family: $sub-font;
+    line-height: 2;
+    margin-top: 2rem;
+
+    @include mq('md') {
+        font-size: 1.4rem;
+    }
+}

@@ -1,0 +1,172 @@
+@use "../setting/index" as *;
+@use "../variable/index" as *;
+
+/* Footer
+=============================================================*/
+.footer {
+
+    .sec-wave {
+        position: static;
+        margin-bottom: -3px;
+    }
+}
+
+.footer-top {
+    background: $main-color;
+    padding: 0 3rem;
+
+    .inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        @include mq('md') {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+.footer-nav {
+    color: #fff;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        height: 20rem;
+        width: 86.1rem;
+
+        @include mq('md') {
+            flex-direction: row;
+            height: auto;
+            width: 29rem;
+            align-items: initial;
+            justify-content: space-between;
+            margin-top: 6rem;
+        }
+
+        li {
+            height: 4rem;
+            width: 20rem;
+            line-height: 4rem;
+            font-family: $main-font-bold;
+
+            @include mq('md') {
+                height: 6rem;
+                line-height: 6rem;
+                width: 13.5rem;
+                border-top: 1px solid #fff;
+
+                &.is-border-bottom {
+                    border-bottom: 1px solid #fff;
+                }
+            }
+
+            &.more-btn {
+                width: 36rem;
+                line-height: 9rem;
+                height: 9rem;
+                margin: 0;
+                border: 1px solid #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: $main-font;
+
+                @include mq('md') {
+                    width: 100%;
+                    line-height: 1.5;
+                    height: 9rem;
+                    text-align: left;
+                    padding-left: 3rem;
+                    letter-spacing: .1em;
+                    justify-content: initial;
+                    margin-top: 3rem;
+                }
+
+                &.is-margin-top {
+                    margin-top: 2rem;
+                }
+            }
+
+            a {
+                display: block;
+                font-size: 1.4rem;
+
+                &:hover {
+                    opacity: .8;
+                }
+            }
+        }
+    }
+}
+
+.footer-bottom {
+    background: 
+    url(../img/footer-bottom-bg.webp) center 2rem / contain no-repeat,
+    $main-color;
+    padding: 5rem 3rem 8rem;
+
+    @include mq('md') {
+        background-position: center bottom;
+        background-size: 95%;
+        padding: 5rem 3rem 20rem;
+    }
+
+    .inner {
+        display: flex;
+        justify-content: space-between;
+
+        @include mq('md') {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+.footer-sns {
+    display: flex;
+    align-items: center;
+
+    @include mq('md') {
+        flex-direction: column;
+    }
+
+    p {
+        color: #fff;
+        font-family: $sub-font;    
+        font-size: 1.4rem;
+    }
+
+    &__icon {
+        margin-left: 2rem;
+
+        @include mq('md') {
+            margin: 3rem 0;
+        }
+
+        a {
+
+            &:hover {
+                opacity: .8;
+            }
+
+            img {
+                width: 4rem;
+
+                @include mq('md') {
+                    width: 8rem;
+                }
+            }
+        }
+    }
+}
+
+.footer-copy {
+    color: #fff;
+    font-family: $sub-font;
+    letter-spacing: .1em;
+    font-size: 1.4rem;
+}

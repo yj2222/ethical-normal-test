@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="82" height="82" viewBox="0 0 82 82">
+  <defs>
+    <filter id="楕円形_13" x="0" y="0" width="82" height="82" filterUnits="userSpaceOnUse">
+      <feOffset dx="2" dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="グループ_3157" data-name="グループ 3157" transform="translate(-1761 -333)">
+    <g transform="matrix(1, 0, 0, 1, 1761, 333)" filter="url(#楕円形_13)">
+      <circle id="楕円形_13-2" data-name="楕円形 13" cx="32" cy="32" r="32" transform="translate(7 7)" fill="#f9f9fc"/>
+    </g>
+    <g id="メールの無料アイコンその5" transform="translate(1782 284.465)">
+      <path id="パス_12806" data-name="パス 12806" d="M31.8,74.535H4.2a4.2,4.2,0,0,0-4.2,4.2V95.856a4.2,4.2,0,0,0,4.2,4.2H31.8a4.2,4.2,0,0,0,4.2-4.2V78.733A4.2,4.2,0,0,0,31.8,74.535ZM34,96.987l-.8.946L22,88.8l-1.733,1.649a3.359,3.359,0,0,1-4.543,0L14,88.8,2.8,97.933,2,96.987l10.508-9.6L1.936,77.448l.625-.828L18,88.318l15.439-11.7.625.828-10.576,9.94Z" fill="#233060"/>
+    </g>
+    <g id="ハートのマーク" transform="translate(1809 344.829)">
+      <path id="パス_12807" data-name="パス 12807" d="M8.09,32.171a2.635,2.635,0,0,0-2.649,2.272,2.635,2.635,0,0,0-2.649-2.272C1.264,32.142,0,33.318,0,35.463c0,2.754,3.116,4.027,5.246,6.084.074.072.057.07.057.07a.179.179,0,0,0,.138.068h0a.179.179,0,0,0,.138-.068s-.017,0,.057-.07c2.131-2.058,5.246-3.33,5.246-6.084C10.883,33.318,9.619,32.142,8.09,32.171Z" transform="translate(0)" fill="#ffeb00"/>
+    </g>
+  </g>
+</svg>

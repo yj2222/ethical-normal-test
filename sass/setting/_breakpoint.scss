@@ -1,0 +1,22 @@
+$small-size-width:        390px;
+$middle-size-width:       768px;
+$large-size-width:       1200px; //デザインカンプサイズに合わせる(基本は1366px)
+$extra-large-size-width: 1920px;
+
+$breakpoints: (
+  'sm':     '(max-width: #{$small-size-width})',
+  'sm-md':  'screen and (min-width: #{$small-size-width + 1}) and (max-width: #{$middle-size-width - 1})',
+  'md':     '(max-width: #{$middle-size-width})',
+  'md-lg':  'screen and (min-width: #{$middle-size-width + 1}) and (max-width: #{$large-size-width - 1})',
+  'lg':     '(max-width: #{$large-size-width})',
+  'lg-xl':  'screen and (min-width: #{$large-size-width + 1}) and (max-width: #{$extra-large-size-width - 1})',
+  'xl':     '(max-width: #{extra-large-size-width})',
+);
+
+//メディアクエリ
+@mixin mq($breakpoint: md) {
+      @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+      }
+}
+

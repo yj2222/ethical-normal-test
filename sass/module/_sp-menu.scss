@@ -1,0 +1,114 @@
+@use "../setting/index" as *;
+@use "../variable/index" as *;
+
+/* SP Menu
+=============================================================*/
+.sp-menu {
+    display: none;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    // height: auto;
+    // min-height: 200vh;
+    overflow-y: auto;
+    z-index: 100;
+
+    background: $main-color;
+    color: #fff;
+    padding: 3rem 3rem 10rem;
+}
+
+.sp-menu-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sp-menu-logo {
+    width: 25rem;
+
+    img {
+        width: 100%;
+    }
+}
+
+.sp-menu-close {
+    width: 3.2rem;
+}
+
+.sp-nav {
+    margin-top: 4rem;
+
+    ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+
+        li {
+            border-top: 1px solid #fff;
+            padding: 2rem 0;
+
+            &.is-borde-bottom {
+                border-bottom: 1px solid #fff;
+            }
+
+            &.is-full-size {
+                width: 100%;
+                grid-column: 1 / 3;
+                margin-top: 2rem;
+                border-bottom: 1px solid #fff;
+                padding: 2rem 3rem;
+                line-height: 1.2;
+                background: url(../../img/sp-menu_arrow.svg) calc(100% - 3rem) center / 1.8rem no-repeat;
+
+                a {
+    
+                    &::before {
+                        content: "";
+                        padding-right: 0;
+                    }
+                }
+            }
+
+            a {
+                font-size: 1.4rem;
+                font-family: $main-font-bold;
+
+                &::before {
+                    content: "-";
+                    padding-right: .5rem;
+                }
+            }
+        }
+    }
+}
+
+.sp-menu-sns {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    letter-spacing: .2em;
+}
+
+.sp-menu-sns-wrap {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 6.4rem 6.4rem 6.4rem;
+    gap: 1rem;
+    justify-content: center;
+
+    a {
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+body.no-scroll {
+    overflow: hidden;
+}

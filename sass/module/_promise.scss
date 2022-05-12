@@ -1,0 +1,202 @@
+@use "../setting/index" as *;
+@use "../variable/index" as *;
+
+/* Promise
+=============================================================*/
+.promise {
+    padding: 0 3rem 60rem;
+
+    @include mq('md') {
+        padding: 0 3rem 20rem;
+    } 
+    
+    .inner {
+
+        .sec-ttl {
+            color: $main-color;
+        }
+    
+    }
+}
+
+.promise-text {
+    width: 48rem;
+    font-family: $sub-font;
+    line-height: 2;
+    margin-top: 5rem;
+    padding-left: 6rem;
+
+    @include mq('md') {
+        width: 100%;
+        padding-left: 2rem;
+    } 
+
+    p {
+        margin-top: 3rem;
+    }
+}
+
+.promise-wrap {
+    display: grid;
+    align-self: flex-start;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    max-width: 1080px;
+    margin: 7rem auto 0;
+
+    @include mq('md') {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+}
+
+.promise-card {
+    padding-left: 11rem;
+    background-position: left center;
+    background-size: 10rem;
+    background-repeat: no-repeat;
+
+    @include mq('md') {
+        padding-left: 0;
+        background-size: 5rem;
+        background-position: left top;
+    }
+
+    &:nth-child(1) {
+        background-image: url(../../img/promise_1.svg);
+    }
+
+    &:nth-child(2) {
+        background-image: url(../../img/promise_2.svg);
+    }
+
+    &:nth-child(3) {
+        background-image: url(../../img/promise_3.svg);
+    }
+
+    &:nth-child(4) {
+        background-image: url(../../img/promise_4.svg);
+    }
+
+    &:nth-child(5) {
+        background-image: url(../../img/promise_5.svg);
+    }
+
+    &:nth-child(6) {
+        background-image: url(../../img/promise_6.svg);
+    }
+
+    &:nth-child(7) {
+        background-image: url(../../img/promise_7.svg);
+        background-size: contain;
+
+        @include mq('md') {
+            background-size: 5rem;
+        }
+    }
+
+    &:nth-child(8) {
+        background-image: url(../../img/promise_8.svg);
+    }
+
+    &:nth-child(9) {
+        background-image: url(../../img/promise_9.svg);
+    }
+
+    &:nth-child(10) {
+        background-image: url(../../img/promise_10.svg);
+    }
+
+    &:nth-child(2n) {
+        position: relative;
+        top: 7rem;
+
+        @include mq('md') {
+            top: 0;
+        }
+    }
+
+    p {
+        color: $main-color;
+        width: 40rem;
+
+        @include mq('md') {
+            width: 100%;
+        }
+    }
+
+    &__ttl {
+        font-family: $main-font-bold;
+        font-size: 3rem;
+        color: $main-color;
+        line-height: 1.2;
+
+        @include mq('md') {
+            padding-left: 6rem;
+            font-size: 2rem;
+        }
+
+        span {
+            font-family: $main-font;
+            font-size: 2rem;
+
+            @include mq('md') {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    &__desc {
+        line-height: 1.5;
+        font-family: $sub-font;
+        margin-top: 1rem;
+
+        @include mq('md') {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.promise-bg-item {
+    width: 46.9rem;
+    position: absolute;
+    bottom: 0;
+    left: 11rem;
+
+    @include mq('md') {
+        width: 13rem;
+        left: 5rem;
+    }
+
+    &__wrap {
+        position: relative;
+
+        .is-front {
+            width: 43.4rem;
+            height: auto;
+            position: relative;
+            z-index: 2;
+
+            @include mq('md') {
+                width: 12.1rem;
+            }
+        
+        }
+
+        .is-back {
+            width: 15.5rem;
+            height: auto;
+            position: absolute;
+            top: 11rem;
+            right: 0;
+            z-index: 1;
+            animation: 20s rotateText linear infinite;
+
+            @include mq('md') {
+                width: 5rem;
+                top: 3rem;
+            }
+        }
+    }
+}

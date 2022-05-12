@@ -1,0 +1,248 @@
+@use "../setting/index" as *;
+@use "../variable/index" as *;
+
+/*============================================================
+# common -全体に共通するスタイル
+=============================================================*/
+html {
+  scroll-behavior: smooth;
+  font-size: 10px; 
+  @include mq('lg') {
+    font-size: calc(100vw / 120); 
+  }
+  @include mq('md') {
+    font-size: calc(100vw / 39);
+  }
+}
+
+body {
+  font-family: $main-font;
+  color: $font-color;
+  font-size: 1.6rem;
+}
+
+.pc-only {
+  // display: block;
+  @include mq('md') {
+    display: none;
+  }
+} 
+
+.sp-only {
+  display: none;
+  @include mq('md') {
+    display: block;
+  }
+} 
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.penguin-left {
+  position: absolute;
+  bottom: 5rem;
+  left: calc((100vw - 1400px) / 2 + 3rem );
+  width: 13vw;
+  height: auto;
+
+  @media screen and (max-width: 1400px) {
+      left: 3rem;
+  }
+
+  @include mq('md') {
+      width: 8.2rem;
+  }
+}
+
+.penguin-right {
+  position: absolute;
+  bottom: 5rem;
+  right: calc((100vw - 1400px) / 2 + 3rem );
+  width: 13vw;
+  height: auto;
+
+  @media screen and (max-width: 1400px) {
+      right: 3rem;
+  }
+
+  @include mq('md') {
+      width: 8.2rem;
+  }
+}
+
+/* section title
+=============================================================*/
+.sec-ttl {
+  color: $main-color;
+
+  &.is-white {
+    color: #fff;
+  }
+
+  h2 {
+    font-size: 7.4rem;
+
+    @include mq('md') {
+      font-size: 3.6rem;
+    }
+  }
+
+  p {
+    font-size: 2.4rem;
+    margin-top: 1.5rem;
+    line-height: 1.5;
+
+    @include mq('md') {
+      font-size: 1.8rem;
+      margin-top: 1rem;
+    }
+  }
+}
+
+.sec-ttl-center {
+  text-align: center;
+  color: $main-color;
+
+  &__top {
+    font-size: 2.4rem;
+    line-height: 1.5;
+
+    @include mq('md') {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__bottom {
+    font-size: 3.6rem;
+    margin-top: 1.5rem;
+
+    @include mq('md') {
+      font-size: 2.4rem;
+      margin-top: 1rem;
+      line-height: 1.5;
+    }
+  }
+}
+
+.sec-text {
+  margin-top: 5rem;
+  margin-left: 6rem;
+  width: 48rem;
+
+  @include mq('md') {
+    margin-top: 6rem;
+    margin-left: 2rem;
+    width: 29rem;
+  } 
+
+  p {
+    font-family: $sub-font;
+    line-height: 2;
+
+    @include mq('md') {
+      font-size: 1.4rem;
+    } 
+  
+
+    &.is-big {
+      font-size: 2.4rem;
+      font-family: $main-font;
+      line-height: 1.5;
+
+      @include mq('md') {
+        font-size: 1.6rem;
+      } 
+    }
+
+    &:not(:first-child) {
+      margin-top: 3.5rem;
+
+      @include mq('md') {
+        margin-top: 4rem;
+      } 
+    }
+  }
+}
+
+
+/* more button
+=============================================================*/
+
+.more-btn {
+  display: block;
+  width: 48rem;
+  height: 10rem;
+  line-height: 10rem;
+  font-family: $main-font-bold;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #fff;
+  background: 
+  url(../../img/sp-menu_arrow.svg) calc(100% - 3rem) center / 1.8rem no-repeat,
+  $main-color;
+  margin: 5rem auto 0;
+  transition: .3s;
+
+  &:hover {
+    background: 
+    url(../../img/sp-menu_arrow-white.svg) calc(100% - 2rem) center / 1.8rem no-repeat,
+    #fff;
+    color: $main-color;
+  }
+
+  @include mq('md') {
+    width: 29rem;
+    height: 6rem;
+    line-height: 6rem;
+    font-size: 1.4rem;
+  }
+
+  &.is-white {
+    background: 
+    url(../../img/sp-menu_arrow-white.svg) calc(100% - 2rem) center / 1.8rem no-repeat,
+    #fff;
+    color: $main-color;
+
+    &:hover {
+      color: #fff;
+      background: 
+      url(../../img/sp-menu_arrow.svg) calc(100% - 3rem) center / 1.8rem no-repeat,
+      $main-color;
+    }  
+  }
+
+}
+
+
+/* scroll top
+=============================================================*/
+
+.sec-wave-parent {
+  position: relative;
+}
+
+.sec-wave {
+  width: 100%;
+  height: 20rem;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+
+  @include mq('md') {
+    height: 15rem;
+  }
+}
+
+/* keyframes
+=============================================================*/
+
+@keyframes rotateText {
+  0%{
+      transform: rotate(0);
+  }
+  100%{
+      transform: rotate(360deg);
+  }
+}

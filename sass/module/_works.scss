@@ -1,0 +1,163 @@
+@use "../setting/index" as *;
+@use "../variable/index" as *;
+
+/* Works
+=============================================================*/
+.works {
+    padding: 5rem 0;
+
+    .inner {
+        padding: 0 3rem;
+    }
+
+    .sec-wave {
+        transform: rotateX(180deg) translateY(-97%);
+        z-index: 1;
+    }
+
+    .penguin-right {
+        bottom: -15rem;
+        z-index: 1;
+
+        @include mq('md') {
+            bottom: -10rem;
+        }
+    }
+}
+
+.works-wrap {
+    margin-top: 6.1rem;
+    background: url(../../img/works-wrap_bg.svg) 0 30% / 100vw no-repeat;
+
+    .inner {
+        max-width: 1080px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6rem;  
+        padding: 0 3rem;
+        position: relative;
+
+        @include mq('md') {
+            grid-template-columns: 1fr;
+            padding: 0;
+        }
+    }
+}
+
+.works-bg-item {
+    width: 35rem;
+    position: absolute;
+    top: -22rem;
+    right: 12rem;
+    z-index: 1;
+
+    @include mq('md') {
+        width: 16.5rem;
+        top: -10rem;
+        right: 3rem;
+    }
+
+    &__wrap {
+        position: relative;
+
+        .is-front {
+            width: 100%;
+            height: auto;
+            position: relative;
+            z-index: 2;        
+        }
+
+        .is-back {
+            width: 15.5rem;
+            height: auto;
+            position: absolute;
+            top: -3rem;
+            right: 3rem;
+            z-index: 1;
+            animation: 20s rotateText linear infinite;
+
+            @include mq('md') {
+                width: 7.1rem;
+                top: -1.5rem;
+                right: 1.5rem;
+            }
+        }
+    }
+}
+
+.works-card-img {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 3rem;
+
+    @include mq('md') {
+        width: 36rem;
+
+        &.is-right {
+            margin-left: auto;
+        }
+
+        &.is-left {
+            
+            p {
+                padding: 2rem 3rem 0 3rem;
+            }
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 32rem;
+        object-fit: cover;
+
+        @include mq('md') {
+            height: 24rem;
+        }
+    }
+
+    p {
+        position: absolute;
+        bottom: -1rem;
+        left: 0;
+        background: #fff;
+        padding: 2rem 3rem 0 0;
+        border-radius: 0 20px 0 0;
+        font-size: 1.4rem;
+        font-family: $main-font-bold;
+        color: $main-color;
+
+        @include mq('md') {
+            font-size: 1.2rem;
+        }    
+    }
+}
+
+.works-card-text {
+
+    @include mq('md') {
+        width: 33rem;
+        margin: 0 auto;
+    }
+}
+
+.works-card-ttl {
+    font-size: 2.1rem;
+    font-family: $main-font-bold;
+    color: $main-color;
+
+    @include mq('md') {
+        font-size: 1.6rem;
+    }
+}
+
+.works-card-desc {
+    line-height: 2;
+    font-family: $sub-font;
+    font-size: 1.6rem;
+    margin-top: 1.5rem;
+
+    @include mq('md') {
+        font-size: 1.4rem;
+    }
+}
