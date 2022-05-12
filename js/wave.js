@@ -17,36 +17,37 @@
             canvasList = [];
             colorList = [];
 
-            canvasList.push(document.getElementById("sineCanvas"));
-            colorList.push(['#233060']);
-
-            // canvas2個め
-            canvasList.push(document.getElementById("sineCanvas1"));
-            colorList.push(['#E7E9EE']);
-
-            canvasList.push(document.getElementById("waveWhite1"));
-            colorList.push(['#FFFFFF']);
-
-            canvasList.push(document.getElementById("waveGray1"));
-            colorList.push(['#E7E9EE']);
-
-            canvasList.push(document.getElementById("waveWhite2"));
-            colorList.push(['#FFFFFF']);
-
-            canvasList.push(document.getElementById("waveBlue1"));
-            colorList.push(['#233060']);
-
-            canvasList.push(document.getElementById("waveWhite3"));
-            colorList.push(['#FFFFFF']);
-
-            canvasList.push(document.getElementById("waveWhite4"));
-            colorList.push(['#FFFFFF']);
-
-            canvasList.push(document.getElementById("waveGray2"));
-            colorList.push(['#E7E9EE']);
-
-            canvasList.push(document.getElementById("waveWhite5"));
-            colorList.push(['#FFFFFF']);
+            if(document.getElementById("sineCanvas") != null) {
+                canvasList.push(document.getElementById("sineCanvas"));
+                colorList.push(['#233060']);
+    
+                canvasList.push(document.getElementById("sineCanvas1"));
+                colorList.push(['#E7E9EE']);
+    
+                canvasList.push(document.getElementById("waveWhite1"));
+                colorList.push(['#FFFFFF']);
+    
+                canvasList.push(document.getElementById("waveGray1"));
+                colorList.push(['#E7E9EE']);
+    
+                canvasList.push(document.getElementById("waveWhite2"));
+                colorList.push(['#FFFFFF']);
+    
+                canvasList.push(document.getElementById("waveBlue1"));
+                colorList.push(['#233060']);
+    
+                canvasList.push(document.getElementById("waveWhite3"));
+                colorList.push(['#FFFFFF']);
+    
+                canvasList.push(document.getElementById("waveWhite4"));
+                colorList.push(['#FFFFFF']);
+    
+                canvasList.push(document.getElementById("waveGray2"));
+                colorList.push(['#E7E9EE']);
+    
+                canvasList.push(document.getElementById("waveWhite5"));
+                colorList.push(['#FFFFFF']);
+            }
 
             canvasList.push(document.getElementById("waveBlue2"));
             colorList.push(['#233060']);
